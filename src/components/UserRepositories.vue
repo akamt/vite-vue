@@ -9,6 +9,7 @@
 <script lang="ts">
 import {ref, defineComponent} from 'vue'
 import fetchUserRepositories from '../api/repositories'
+import { Repository } from "../types/repository";
 
 export default defineComponent({
   name: 'UserRepositories',
@@ -19,7 +20,7 @@ export default defineComponent({
     }
   },
   setup: (props) => {
-    const repositories = ref([])
+    const repositories = ref<Repository>([])
     const getUserRepositories = async () => {
       repositories.value = await fetchUserRepositories(props.userName)
     }

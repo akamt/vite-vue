@@ -1,6 +1,4 @@
-type Repository = {
-    name: string
-}
+import { Repository } from "../types/repository";
 
 export default async function (userName: string): Promise<Repository[]> {
     return [
