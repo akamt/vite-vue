@@ -1,3 +1,3 @@
 export type Repository = {
-    name: string
-}
+  name: string;
+};

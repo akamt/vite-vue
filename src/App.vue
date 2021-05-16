@@ -5,16 +5,17 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
+import { defineComponent } from "vue";
+import HelloWorld from "./components/HelloWorld.vue";
 import UserRepositories from "./components/UserRepositories.vue";
 
 export default defineComponent({
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld, UserRepositories
-  }
-})
+    HelloWorld,
+    UserRepositories,
+  },
+});
 </script>
 
 <style>

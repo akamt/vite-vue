@@ -7,31 +7,31 @@
 </template>
 
 <script lang="ts">
-import {ref, defineComponent} from 'vue'
-import fetchUserRepositories from '../api/repositories'
+import { ref, defineComponent } from "vue";
+import fetchUserRepositories from "../api/repositories";
 import { Repository } from "../types/repository";
 
 export default defineComponent({
-  name: 'UserRepositories',
+  name: "UserRepositories",
   props: {
     userName: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   setup: (props) => {
-    const repositories = ref<Repository>([])
+    const repositories = ref<Repository>([]);
     const getUserRepositories = async () => {
-      repositories.value = await fetchUserRepositories(props.userName)
-    }
+      repositories.value = await fetchUserRepositories(props.userName);
+    };
 
     return {
       repositories,
-      getUserRepositories
-    }
+      getUserRepositories,
+    };
   },
   mounted() {
-    this.getUserRepositories()
-  }
-})
+    this.getUserRepositories();
+  },
+});
 </script>
